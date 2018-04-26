@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>hero-service</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>edu.zut.cs.software</groupId>
+  		<artifactId>hero-dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
