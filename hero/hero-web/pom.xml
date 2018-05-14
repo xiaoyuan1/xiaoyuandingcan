@@ -7,7 +7,7 @@
   </parent>
   <artifactId>hero-web</artifactId>
   <packaging>war</packaging>
-	<dependencies>
+  	<dependencies>
 		<dependency>
 			<groupId>edu.zut.cs.software</groupId>
 			<artifactId>hero-service</artifactId>
