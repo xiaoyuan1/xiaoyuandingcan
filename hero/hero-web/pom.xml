@@ -7,4 +7,17 @@
   </parent>
   <artifactId>hero-web</artifactId>
   <packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>edu.zut.cs.software</groupId>
+			<artifactId>hero-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
 </project>
