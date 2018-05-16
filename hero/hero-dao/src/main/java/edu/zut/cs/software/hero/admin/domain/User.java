@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
-@Table(name="USER")
+@Table(name="T_USER")
 @Entity
 public class User extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.admin.domain.Group;
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
-@Table(name="FOOT")
+@Table(name="T_FOOT")
 @Entity
 public class Foot extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
 
-@Table(name="PUSH")
+@Table(name="T_PUSH")
 @Entity
 public class Push extends BaseEntity{
 
