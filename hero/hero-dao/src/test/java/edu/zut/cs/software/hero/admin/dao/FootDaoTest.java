@@ -1,30 +1,29 @@
 package edu.zut.cs.software.hero.admin.dao;
 
+import static org.junit.Assert.*;
+
+import java.util.List;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import edu.zut.cs.software.hero.admin.dao.FootDao;
 import edu.zut.cs.software.hero.admin.domain.Foot;
-import edu.zut.cs.software.hero.base.dao.DaoConfig;
+import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DaoConfig.class)
-class FootDaoTest {
+public class FootDaoTest extends GenericDaoTestCase<Long, Foot, FootDao> {
 
 	@Autowired
 	FootDao footDao;
 
 	@Test
-	void test() {
-		String footname = "world";
-		Foot query = new Foot();
-		// List<User> result = this.userDao.findOne(null);
-		Foot expectedFoot = new Foot();
-		// expectedUser.setUsername(username);
-		// assertEquals(user, expectedUser);
-		// assertEquals(user.getUsername(), expectedUser.getUsername());
+	public void test() {
+		Foot r = new Foot();
+		r.setProduct_name("test_role");
+		Foot test_role = this.footDao.save(r);
+		Long role_id = test_role.getId();
+		Foot result = this.footDao.getOne(role_id);
+		assertEquals(test_role, result);
+		List<Foot> all = this.footDao.findAll();
 	}
-
 }
