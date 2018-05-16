@@ -5,6 +5,7 @@ package edu.zut.cs.software.hero.admin.service;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import edu.zut.cs.software.hero.admin.domain.Depot;
 import edu.zut.cs.software.hero.admin.domain.Foot;
 import edu.zut.cs.software.hero.admin.domain.Group;
 import edu.zut.cs.software.hero.admin.domain.Push;
@@ -93,7 +94,7 @@ public class AdminEntityGenerator extends GenericGenerator {
 	public void gen_depot(Group g) {
 		for (int i = 0; i < 10; i++) {
 			Depot d = new Depot();
-			d.setname("name" + i);
+			d.setRaw("name" + i);
 			//u.setPassword("password_" + i);
 			d.setGroup(g);
 			this.depotManager.save(d);
