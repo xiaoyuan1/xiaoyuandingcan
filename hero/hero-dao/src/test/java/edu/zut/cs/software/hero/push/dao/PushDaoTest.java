@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.dao;
+package edu.zut.cs.software.hero.push.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.software.hero.admin.domain.Push;
 import edu.zut.cs.software.hero.base.dao.DaoConfig;
+import edu.zut.cs.software.hero.push.domain.Push;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -21,11 +21,8 @@ public class PushDaoTest {
 	void test() {
 		String pushname = "world";
 		Push query = new Push();
-		// List<User> result = this.userDao.findOne(null);
-		Push expectedFoot = new Push();
-		// expectedUser.setUsername(username);
-		// assertEquals(user, expectedUser);
-		// assertEquals(user.getUsername(), expectedUser.getUsername());
+		Push expected = new Push();
+		
 	}
 
 }

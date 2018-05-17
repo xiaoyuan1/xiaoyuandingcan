@@ -1,12 +1,12 @@
-package edu.zut.cs.software.hero.admin.service.impl;
+package edu.zut.cs.software.hero.push.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.software.hero.admin.dao.PushDao;
-import edu.zut.cs.software.hero.admin.domain.Push;
-import edu.zut.cs.software.hero.admin.service.PushManager;
 import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
+import edu.zut.cs.software.hero.push.dao.PushDao;
+import edu.zut.cs.software.hero.push.domain.Push;
+import edu.zut.cs.software.hero.push.service.PushManager;
 
 @Component
 public class PushManagerImpl extends GenericManagerImpl<Push, Long> implements PushManager{

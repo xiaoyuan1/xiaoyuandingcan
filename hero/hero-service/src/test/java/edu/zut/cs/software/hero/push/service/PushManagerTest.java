@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.service;
+package edu.zut.cs.software.hero.push.service;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.software.hero.admin.domain.Push;
+import edu.zut.cs.software.hero.admin.service.AdminServiceConfig;
+import edu.zut.cs.software.hero.push.domain.Push;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AdminServiceConfig.class)
@@ -27,9 +28,7 @@ public class PushManagerTest {
 	public void testFindbyPushname() {
 		String pushname = "world";
 		Push expected_push = new Push();
-		// expected_user.setUsername(username);
 		Push push = this.pushManager.findbyPushname(pushname);
-		// assertEquals(user.getUsername(), expected_user.getUsername());
 		assertEquals(push, expected_push);
 	}
 
