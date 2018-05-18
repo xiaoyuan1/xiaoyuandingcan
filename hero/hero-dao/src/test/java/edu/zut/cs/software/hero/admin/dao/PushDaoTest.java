@@ -1,31 +1,27 @@
 package edu.zut.cs.software.hero.admin.dao;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import edu.zut.cs.software.hero.admin.domain.Push;
-import edu.zut.cs.software.hero.base.dao.DaoConfig;
+import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DaoConfig.class)
-public class PushDaoTest {
+public class PushDaoTest extends GenericDaoTestCase<Long, Push, PushDao> {
 
 	@Autowired
     PushDao pushDao;
 
 	@Test
-	void test() {
-		String pushname = "world";
-		Push query = new Push();
-		// List<User> result = this.userDao.findOne(null);
-		Push expectedFoot = new Push();
-		// expectedUser.setUsername(username);
-		// assertEquals(user, expectedUser);
-		// assertEquals(user.getUsername(), expectedUser.getUsername());
+	public void test() {
+		Push push = new Push();
+		push.setMessage("111111111111111");
+		push.setLucky("zexing");
+		push.setFood("beat");
+		Push test_push = this.pushDao.save(push);
+		Push result = new Push();
+		assertEquals(test_push, result);
 	}
 
 }
