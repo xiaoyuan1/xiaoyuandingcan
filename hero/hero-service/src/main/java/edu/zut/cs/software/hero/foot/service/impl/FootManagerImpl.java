@@ -1,12 +1,12 @@
-package edu.zut.cs.software.hero.admin.service.impl;
+package edu.zut.cs.software.hero.foot.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.software.hero.admin.dao.FootDao;
-import edu.zut.cs.software.hero.admin.domain.Foot;
-import edu.zut.cs.software.hero.admin.service.FootManager;
+import edu.zut.cs.software.hero.Foot.dao.FootDao;
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
+import edu.zut.cs.software.hero.foot.service.FootManager;
 
 @Component
 public class FootManagerImpl extends GenericManagerImpl<Foot, Long> implements FootManager {

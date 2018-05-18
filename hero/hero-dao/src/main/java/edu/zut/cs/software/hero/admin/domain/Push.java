@@ -6,7 +6,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import edu.zut.cs.software.hero.admin.domain.Foot;
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.admin.domain.Group;
 import edu.zut.cs.software.hero.admin.domain.User;
 import edu.zut.cs.software.hero.base.domain.BaseEntity;

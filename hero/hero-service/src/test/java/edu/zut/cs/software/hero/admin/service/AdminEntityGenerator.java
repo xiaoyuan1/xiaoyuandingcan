@@ -5,14 +5,14 @@ package edu.zut.cs.software.hero.admin.service;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.admin.domain.Depot;
-import edu.zut.cs.software.hero.admin.domain.Foot;
 import edu.zut.cs.software.hero.admin.domain.Group;
 import edu.zut.cs.software.hero.admin.domain.Order;
 import edu.zut.cs.software.hero.admin.domain.Push;
 import edu.zut.cs.software.hero.admin.domain.User;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
+import edu.zut.cs.software.hero.foot.service.FootManager;
 
 public class AdminEntityGenerator extends GenericGenerator {
 

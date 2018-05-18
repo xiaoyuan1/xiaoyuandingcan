@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.software.hero.admin.domain.Depot;
-import edu.zut.cs.software.hero.admin.domain.Foot;
+
 import edu.zut.cs.software.hero.base.dao.DaoConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)

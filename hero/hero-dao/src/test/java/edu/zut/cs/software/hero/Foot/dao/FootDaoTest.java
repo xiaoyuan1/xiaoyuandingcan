@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.dao;
+package edu.zut.cs.software.hero.Foot.dao;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +7,7 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.software.hero.admin.dao.FootDao;
-import edu.zut.cs.software.hero.admin.domain.Foot;
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 
 public class FootDaoTest extends GenericDaoTestCase<Long, Foot, FootDao> {

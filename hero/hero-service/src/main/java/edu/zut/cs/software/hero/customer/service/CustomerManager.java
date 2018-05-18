@@ -1,8 +1,10 @@
 package edu.zut.cs.software.hero.customer.service;
 
-import edu.zut.cs.software.hero.admin.domain.Foot;
+
 
 import java.util.List;
+
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 
 public interface CustomerManager {
 

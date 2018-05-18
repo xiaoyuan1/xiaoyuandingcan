@@ -11,6 +11,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.base.domain.BaseTreeEntity;
 
 @Table(name = "T_ADMIN_GROUP")

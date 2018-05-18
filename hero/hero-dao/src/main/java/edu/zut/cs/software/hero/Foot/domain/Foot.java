@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.domain;
+package edu.zut.cs.software.hero.Foot.domain;
 
 
 

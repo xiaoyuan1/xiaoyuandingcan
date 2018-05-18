@@ -1,6 +1,7 @@
 package edu.zut.cs.software.hero.customer.service;
 
-import edu.zut.cs.software.hero.admin.domain.Foot;
+
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.admin.service.AdminServiceConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
