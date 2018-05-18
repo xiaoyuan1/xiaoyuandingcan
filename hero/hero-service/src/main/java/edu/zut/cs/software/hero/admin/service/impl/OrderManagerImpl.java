@@ -7,7 +7,7 @@ import edu.zut.cs.software.hero.admin.dao.OrderDao;
 import edu.zut.cs.software.hero.admin.domain.Order;
 import edu.zut.cs.software.hero.admin.service.OrderManager;
 import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
-
+@Component
 public class OrderManagerImpl extends GenericManagerImpl<Order, Long> implements OrderManager {
 
 	OrderDao orderDao;
