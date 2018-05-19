@@ -5,17 +5,12 @@ import static org.junit.Assert.*;
 import java.util.List;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import edu.zut.cs.software.hero.admin.domain.Depot;
+import edu.zut.cs.software.hero.base.service.GenericGenerator;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=AdminServiceConfig.class)
-public class DepotManagerTest {
+public class DepotManagerTest extends GenericGenerator{
 	@Autowired
 	DepotManager depotManager;
 	

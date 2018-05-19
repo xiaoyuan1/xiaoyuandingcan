@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
-@Table(name="DEPOT")
+@Table(name="T_DEPOT")
 @Entity
 public class Depot extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;

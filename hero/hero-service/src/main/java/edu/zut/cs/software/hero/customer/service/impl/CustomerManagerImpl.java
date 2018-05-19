@@ -1,6 +1,7 @@
 package edu.zut.cs.software.hero.customer.service.impl;
 
-import edu.zut.cs.software.hero.admin.domain.Foot;
+
+import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.customer.service.CustomerManager;
 import org.springframework.stereotype.Component;
 
