@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 import edu.zut.cs.software.hero.admin.domain.Order;
-import edu.zut.cs.software.hero.admin.domain.User;
+
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 
 public class OrderDaoTest extends GenericDaoTestCase<Long, Order, OrderDao> {

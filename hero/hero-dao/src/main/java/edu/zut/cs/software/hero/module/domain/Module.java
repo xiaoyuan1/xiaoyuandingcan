@@ -12,9 +12,7 @@ import edu.zut.cs.software.hero.base.domain.BaseTreeEntity;
 @NamedQueries({ @NamedQuery(name = "Module.getRoot", query = "select m from Module m where m.parent is null") })
 public class Module extends BaseTreeEntity<Module> {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1945866957570000331L;
 
 	String description;

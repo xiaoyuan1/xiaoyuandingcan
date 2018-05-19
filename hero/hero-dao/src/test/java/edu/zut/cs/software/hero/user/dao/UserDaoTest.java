@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.dao;
+package edu.zut.cs.software.hero.user.dao;
 
 import static org.junit.Assert.*;
 
@@ -10,8 +10,9 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
-import edu.zut.cs.software.hero.admin.domain.User;
+
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
+import edu.zut.cs.software.hero.user.domain.User;
 
 
 
