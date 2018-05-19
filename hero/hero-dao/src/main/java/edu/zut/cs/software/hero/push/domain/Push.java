@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.admin.domain;
+package edu.zut.cs.software.hero.push.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -9,10 +9,10 @@ import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.admin.domain.Depot;
 import edu.zut.cs.software.hero.admin.domain.Group;
 import edu.zut.cs.software.hero.admin.domain.Order;
-import edu.zut.cs.software.hero.admin.domain.Push;
-
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.foot.service.FootManager;
+import edu.zut.cs.software.hero.push.domain.Push;
+import edu.zut.cs.software.hero.push.service.PushManager;
 import edu.zut.cs.software.hero.user.domain.User;
 import edu.zut.cs.software.hero.user.service.UserManager;
 
