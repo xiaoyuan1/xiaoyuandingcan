@@ -34,13 +34,13 @@ public class Push extends BaseEntity{
 //以下为推送实体	
 	
 	@Column(name = "MESSAGE")
-	String message;//推送内容
+	private String message;//推送内容
 	
 	@Column(name="FOOD")
-	Foot food;//推送菜品
+	private Foot food;//推送菜品
 	
 	@Column(name="LUCKY")
-	User lucky;//推送幸运用户
+	private User lucky;//推送幸运用户
 	
 	public String getMessage() {//获取推荐消息函数
 		return message;
@@ -69,10 +69,10 @@ public class Push extends BaseEntity{
 		food.setProduct_name(f);
 	}
 
-	public void setLucky(String l) {//设置幸运观众
-		lucky.setUsername(l);
+	public void setLucky() {//设置幸运用户
+		
+		//lucky.setUsername();
 	}
-	
 	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
