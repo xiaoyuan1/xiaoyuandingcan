@@ -1,11 +1,11 @@
-package edu.zut.cs.software.hero.admin.dao;
+package edu.zut.cs.software.hero.push.dao;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import edu.zut.cs.software.hero.admin.domain.Push;
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
+import edu.zut.cs.software.hero.push.domain.Push;
 
 
 public class PushDaoTest extends GenericDaoTestCase<Long, Push, PushDao> {
