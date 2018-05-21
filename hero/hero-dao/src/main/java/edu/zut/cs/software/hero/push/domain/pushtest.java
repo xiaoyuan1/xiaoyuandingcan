@@ -8,6 +8,7 @@ public class pushtest {
 		Push push=new Push();
 		push.setMessage("今日XXX活动，本店开展XXX活动，菜品一律XX折，并赠送XXX！！");
 		push.showMessage();
+		push.setLucky();
+		push.setFood(null);
 	}
-
 }
