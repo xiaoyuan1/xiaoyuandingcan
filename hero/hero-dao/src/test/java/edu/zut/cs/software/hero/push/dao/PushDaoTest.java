@@ -17,7 +17,6 @@ public class PushDaoTest extends GenericDaoTestCase<Long, Push, PushDao> {
 	public void test() {
 		Push push = new Push();
 		push.setMessage("111111111111111");
-		push.setLucky("zexing");
 		push.setFood("beat");
 		Push test_push = this.pushDao.save(push);
 		Push result = new Push();

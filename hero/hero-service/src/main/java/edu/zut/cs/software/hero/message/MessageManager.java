@@ -1,6 +1,5 @@
 package edu.zut.cs.software.hero.message;
 
-package edu.zut.cs.software.hero.dingdan.service.impl;
 
 import java.util.List;
 
