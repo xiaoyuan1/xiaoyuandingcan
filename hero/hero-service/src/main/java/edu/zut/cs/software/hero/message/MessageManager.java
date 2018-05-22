@@ -1,7 +1,5 @@
-package edu.zut.cs.software.hero.message;
+/*package edu.zut.cs.software.hero.message;
 
-
-import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -29,4 +27,4 @@ public class MessageManager  extends GenericTreeManagerImpl<Dingdan, Long> imple
 	}
 
 
-}
+}*/

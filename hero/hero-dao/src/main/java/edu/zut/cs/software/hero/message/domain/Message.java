@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.message.domain;
+/*package edu.zut.cs.software.hero.message.domain;
 
 import javax.persistence.Column;
 
@@ -48,4 +48,4 @@ public class Message extends BaseTreeEntity<Dingdan>{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-}
+}*/

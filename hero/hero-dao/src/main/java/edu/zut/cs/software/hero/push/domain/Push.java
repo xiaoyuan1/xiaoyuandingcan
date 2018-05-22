@@ -9,13 +9,9 @@ import java.util.Random;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.Foot.domain.Foot;
-import edu.zut.cs.software.hero.admin.domain.Group;
-
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
 import edu.zut.cs.software.hero.user.domain.User;
 
@@ -24,19 +20,6 @@ import edu.zut.cs.software.hero.user.domain.User;
 public class Push extends BaseEntity{
 
 	private static final long serialVersionUID = -4376674977047164142L;
-	
-	@ManyToOne
-	@JoinColumn(name = "GROUP_ID")
-	Group group;
-	
-	public Group getGroup() {
-		return group;
-	}
-	
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-	
 	
 //以下为推送类实体	
 	
@@ -102,7 +85,8 @@ public class Push extends BaseEntity{
             
             //Random  n = new Random();//随机数生成
             String food = null;
-            int i=0;
+            @SuppressWarnings("unused")
+			int i=0;
 
             //System.out.println(j);
             while(rs.next()){ 

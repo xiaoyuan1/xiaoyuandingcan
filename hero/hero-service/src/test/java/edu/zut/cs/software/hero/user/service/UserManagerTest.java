@@ -9,14 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.user.domain.User;
 
-
-
-
-
-
-
-
-
 public class UserManagerTest extends GenericGenerator{
 
 	@Autowired

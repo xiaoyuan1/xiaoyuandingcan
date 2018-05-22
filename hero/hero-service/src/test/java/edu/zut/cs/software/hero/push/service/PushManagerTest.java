@@ -12,7 +12,7 @@ public class PushManagerTest  extends GenericGenerator{
 	PushManager pushManager;
 
 	@Test
-	public void gen_group10() {
+	public void push() {
 		for (int i = 0; i < 10; i++) {
 			Push g = new Push();
 			g.setMessage("group_" + i);

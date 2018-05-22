@@ -11,8 +11,6 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
-import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 import edu.zut.cs.software.hero.base.dao.GenericTreeDaoTestCase;
 import edu.zut.cs.software.hero.dingdan.dao.DingdanDao;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
@@ -23,11 +21,12 @@ public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, Dingda
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(DingdanDaoTest.class);
+	//private static final Logger logger = Logger.getLogger(DingdanDaoTest.class);
 	
+	@Autowired
 	DingdanDao dingdanDao;
 
-	/*@Test
+	@Test
 	public void test() {
 		Dingdan r = new Dingdan();
 		r.setOrderid("test_Dingdan");
@@ -36,8 +35,8 @@ public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, Dingda
 		Dingdan result = this.dingdanDao.getOne(role_id);
 		assertEquals(test_dingdan, result);
 		List<Dingdan> all = this.dingdanDao.findAll();
-	}*/
-	@Autowired
+	}
+	/*@Autowired
 	public void setGroupDao(DingdanDao dingdanDao) {
 		this.dingdanDao = dingdanDao;
 		this.dao = this.dingdanDao;
@@ -63,7 +62,7 @@ public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, Dingda
 		if (logger.isInfoEnabled()) {
 			logger.info("testGetRoot() - List<Group> roots=" + roots); //$NON-NLS-1$
 		}
-	}
+	}*/
 
 }
 
