@@ -9,5 +9,5 @@
 	default-lazy-init="true">
 	<!-- Activates scanning of @Repository -->
 	<jpa:repositories
-		base-package="edu.zut.cs.software.**.dao" />
+		base-package="edu.zut.cs.software.hero.**.dao" />
 </beans>

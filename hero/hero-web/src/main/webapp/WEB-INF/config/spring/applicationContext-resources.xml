@@ -14,12 +14,12 @@
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
         <property name="locations">
             <list>
-                <value>/WEB-INF/config/software/jdbc.properties</value>
+                <value>/WEB-INF/config/hero/jdbc.properties</value>
             </list>
         </property>
     </bean>
 
-    <context:property-placeholder location="/WEB-INF/config/software/jdbc.properties"/>
+    <context:property-placeholder location="/WEB-INF/config/hero/jdbc.properties"/>
 
     <!-- JNDI DataSource for J2EE environments -->
     <!-- <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/appfuse"/> -->

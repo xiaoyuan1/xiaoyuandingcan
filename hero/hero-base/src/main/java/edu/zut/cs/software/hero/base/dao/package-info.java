@@ -2,7 +2,7 @@
  * Data Access Object (dao) Base Classes
  */
 /**
- * @author liuxiaoming
+ * @author whf
  *
  */
 package edu.zut.cs.software.hero.base.dao;

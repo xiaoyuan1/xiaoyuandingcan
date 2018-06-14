@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.web.spring.controller;
+/*package edu.zut.cs.software.hero.web.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,3 +25,4 @@ public class FootController extends GenericController<Foot, Long, FootManager> {
 		return "user/index";
 	}
 }
+*/

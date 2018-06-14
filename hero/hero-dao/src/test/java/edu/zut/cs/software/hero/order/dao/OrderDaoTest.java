@@ -1,5 +1,7 @@
 package edu.zut.cs.software.hero.order.dao;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.List;
 
 
@@ -27,6 +29,7 @@ public class OrderDaoTest extends GenericDaoTestCase<Long, Order, OrderDao> {
 		o.setFood_price("test_food_price");
 		Order test_food_price=this.orderDao.save(o);
 		List<Order> all = this.orderDao.findAll();
+		assertEquals(test_food_name, all);
 	}
 	
 }

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * 系统服务组件Aspect切面Bean
  * 
- * @author liuxiaoming
+ * @author wanghongfei
  *
  */
 // 声明这是一个组件
@@ -83,7 +83,7 @@ public class LoggingAspect {
 	}
 
 	// 配置切入点,该方法无方法体,主要为方便同类中其他方法使用此处配置的切入点
-	@Pointcut("execution(* edu.zut.cs.software.hero.*.service.*..*(..))")
+	@Pointcut("execution(* edu.zut.cs.javaee.dream.*.service.*..*(..))")
 	public void aspect() {
 	}
 
