@@ -1,32 +1,30 @@
 package edu.zut.cs.software.hero.order.service;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.List;
-
 import org.junit.Test;
+
 import org.springframework.beans.factory.annotation.Autowired;
+
 import edu.zut.cs.software.hero.order.domain.Order;
 
-public class OrderManagerTest {
+import edu.zut.cs.software.hero.base.service.GenericGenerator;
+
+public class OrderManagerTest extends GenericGenerator{
 
 	@Autowired
 	OrderManager orderManager;
 
 	@Test
-	public void testFindAll() {
-		List<Order> all = this.orderManager.findAll();
-		assertEquals(all.size(), 100);
-	}
-
-	@Test
-	public void testFindbyOrdername() {
-		String ordername = "world";
-		Order expected_order = new Order();
-		// expected_user.setUsername(username);
-		Order order = this.orderManager.findbyOrdername(ordername);
-		// assertEquals(user.getUsername(), expected_user.getUsername());
-		assertEquals(order, expected_order);
+	public void gen_order() {
+		for (int i = 0; i < 10; i++) {
+			Order g = new Order();
+			g.setOrder_Anumber("group_" + i);
+			this.orderManager.save(g);
+			for (int j = 0; j < 10; j++) {
+            Order group = new Order();
+			group.setOrder_Anumber("group_" + i + "_" + j);
+			g = this.orderManager.save(group);
+			}
+		}
 	}
 
 }

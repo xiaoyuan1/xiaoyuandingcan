@@ -16,16 +16,12 @@ public class OrderDaoTest extends GenericDaoTestCase<Long, Order, OrderDao> {
 	@Test
 	public void test() {
 		Order o=new Order();
-		o.setAddress("test_address");
-		Order test_address=this.orderDao.save(o);
-		o.setCustomer("test_customer");
-		Order test_customer=this.orderDao.save(o);
-		o.setFood_name("test_food_name"); 
-		Order test_food_name=this.orderDao.save(o);
-		o.setFood_number("test_food_number");
-		Order test_food_number=this.orderDao.save(o);
-		o.setFood_price("test_food_price");
-		Order test_food_price=this.orderDao.save(o);
+		o.setOrder_Aprice("test_order_Aprice");
+		Order test_order_Aprice=this.orderDao.save(o);
+		o.setOrder_Acost("test_order_Acost");
+		Order test_order_Acost=this.orderDao.save(o);
+		o.setOrder_Aprofit("test_order_Aprofit");
+		Order test_order_Aprofit=this.orderDao.save(o);
 		List<Order> all = this.orderDao.findAll();
 	}
 	
