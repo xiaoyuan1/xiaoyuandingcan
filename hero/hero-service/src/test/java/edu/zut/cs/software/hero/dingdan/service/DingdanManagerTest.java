@@ -19,7 +19,7 @@ public class DingdanManagerTest extends GenericGenerator{
 			for (int j = 0; j < 10; j++) {
 				Dingdan group = new Dingdan();
 				group.setOrderid("dingdan_" + i + "_" + j);
-				group.setParent(g);
+				//group.setParent(g);
 				g = this.groupManager.save(group);
 			}
 		}

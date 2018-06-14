@@ -9,5 +9,9 @@
 
     <!-- Activates scanning of @Service -->
     <context:component-scan
+<<<<<<< HEAD
             base-package="edu.zut.cs.software.hero.**.service"/>
+=======
+            base-package="edu.zut.cs.software.**.service"/>
+>>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
 </beans>

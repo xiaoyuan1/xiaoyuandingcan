@@ -16,7 +16,11 @@ import org.springframework.stereotype.Component;
 /**
  * 系统服务组件Aspect切面Bean
  * 
+<<<<<<< HEAD
  * @author liuxiaoming
+=======
+ * @author wanghongfei
+>>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
  *
  */
 // 声明这是一个组件

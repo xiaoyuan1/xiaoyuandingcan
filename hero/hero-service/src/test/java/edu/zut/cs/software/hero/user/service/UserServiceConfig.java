@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.user.service;
+/*package edu.zut.cs.software.hero.user.service;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,4 +7,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "edu.zut.cs.software.hero")
 public class UserServiceConfig {
 
-}
+}*/

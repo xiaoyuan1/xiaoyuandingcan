@@ -23,5 +23,14 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
+<<<<<<< HEAD
 	</dependencies>
+=======
+		<dependency>  
+  <groupId>org.apache.geronimo.bundles</groupId>  
+  <artifactId>aspectjweaver</artifactId>  
+  <version>1.6.8_2</version>  
+</dependency> 
+  </dependencies>
+>>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
 </project>

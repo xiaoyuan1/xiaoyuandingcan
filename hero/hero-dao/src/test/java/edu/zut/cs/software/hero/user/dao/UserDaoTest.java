@@ -27,7 +27,7 @@ public class UserDaoTest extends GenericDaoTestCase<Long, User, UserDao>  {
 		Long user_id = test_user.getId();
 		User result = this.userDao.getOne(user_id);
 		assertEquals(test_user, result);
-		List<User> all = this.userDao.findAll();
+		//List<User> all = this.userDao.findAll();
 	}
 
 }

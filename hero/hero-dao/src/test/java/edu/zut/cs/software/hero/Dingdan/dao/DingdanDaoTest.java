@@ -11,12 +11,14 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 import edu.zut.cs.software.hero.base.dao.GenericTreeDaoTestCase;
 import edu.zut.cs.software.hero.dingdan.dao.DingdanDao;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
 
 
-public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, DingdanDao> {
+public class DingdanDaoTest extends GenericDaoTestCase<Long, Dingdan, DingdanDao> {
 
 	/**
 	 * Logger for this class

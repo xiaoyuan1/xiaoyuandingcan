@@ -14,7 +14,11 @@
 	<aop:aspectj-autoproxy />
 
 	<!-- <aop:config> <aop:aspect id="before" ref="beforeLogger"> <aop:pointcut 
+<<<<<<< HEAD
 		id="MyPointCut" expression="execution(* edu.zut.cs.software.hero.*.service.*..*(..))" 
+=======
+		id="MyPointCut" expression="execution(* edu.zut.cs.javaee.dream.*.service.*..*(..))" 
+>>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
 		/> <aop:before method="before" pointcut-ref="MyPointCut" /> </aop:aspect> 
 		</aop:config> -->
 </beans>
