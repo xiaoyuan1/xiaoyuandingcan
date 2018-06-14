@@ -7,7 +7,11 @@
 		</Console>
 	</Appenders>
 	<Loggers>
-		<Root level="error">
+		<logger name="org.bouncycastle" level="ERROR" />
+		<logger name="org.springframework" level="WARN" />
+		<logger name="org.hibernate" level="WARN" />
+		<logger name="edu.zut.cs" level="DEBUG" />
+		<Root level="debug">
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>
