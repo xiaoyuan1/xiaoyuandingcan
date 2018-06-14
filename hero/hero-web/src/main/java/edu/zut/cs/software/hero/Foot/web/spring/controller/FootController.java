@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.foot.web.spring.controller;
+package edu.zut.cs.software.hero.Foot.web.spring.controller;
 
 
 
