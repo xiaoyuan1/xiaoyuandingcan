@@ -9,7 +9,6 @@ import edu.zut.cs.software.hero.base.domain.BaseEntity;
 @Entity
 public class Order  extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;
-<<<<<<< HEAD
 	@Column(name="Address")
 	String address;     //地址
 	@Column(name="Customer")
@@ -67,8 +66,7 @@ public class Order  extends BaseEntity{
 		this.food_price = food_price;
 	}
 	
-=======
-	
+
 	@Column(name="Order_Aprice")
 	String order_Aprice;     //总销售额
 	@Column(name="Order_Acost")
@@ -108,5 +106,4 @@ public class Order  extends BaseEntity{
 	public String getOrder_Anumber() {
 		return order_Anumber;
 	}
->>>>>>> 27fc1d6fd1df28f337352048a2fed320a6f48e6a
 }

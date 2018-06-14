@@ -1,8 +1,6 @@
-<<<<<<< HEAD:hero/hero-web/src/main/java/edu/zut/cs/software/hero/Foot/web/spring/controller/FootController.java
 package edu.zut.cs.software.hero.foot.web.spring.controller;
-=======
-/*package edu.zut.cs.software.hero.web.spring.controller;
->>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262:hero/hero-web/src/main/java/edu/zut/cs/software/hero/web/spring/controller/FootController.java
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,4 +30,3 @@ public class FootController extends GenericController<Foot, Long, FootManager> {
 		this.manager = this.footManager;
 	}
 }
-*/

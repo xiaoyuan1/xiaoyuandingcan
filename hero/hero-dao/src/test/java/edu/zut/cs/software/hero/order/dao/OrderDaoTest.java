@@ -25,7 +25,7 @@ public class OrderDaoTest extends GenericDaoTestCase<Long, Order, OrderDao> {
 		o.setOrder_Aprofit("test_order_Aprofit");
 		Order test_order_Aprofit=this.orderDao.save(o);
 		List<Order> all = this.orderDao.findAll();
-		assertEquals(test_food_name, all);
+		assertEquals(test_order_Aprofit, all);
 	}
 	
 }

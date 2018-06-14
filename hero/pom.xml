@@ -12,22 +12,6 @@
 		<module>hero-service</module>
 		<module>hero-web</module>
 	</modules>
-<<<<<<< HEAD
-	<build>
-		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-=======
->>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -72,11 +56,6 @@
 		</dependency>
 		<!-- ============== test end ============== -->
 	</dependencies>
-
-<<<<<<< HEAD
-=======
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -101,5 +80,5 @@
 			</plugin>
 		</plugins>
 	</build>
->>>>>>> 602369c6cf1bda1d870d496eb7c58a077b1c3262
+
 </project>
