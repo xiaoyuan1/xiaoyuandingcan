@@ -1,45 +1,34 @@
-/**
- * 
- */
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('order.OrderModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
-						name : 'id',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'code',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'fullName',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'gender',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'grade',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'clazz',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'dateCreated',
-						type : 'date',
-						dateFormat : 'time',
-						sortable : true
-					}, {
-						name : 'dateModified',
-						type : 'date',
-						dateFormat : 'time',
-						sortable : true
-					}]
+				name : 'id',
+				type : 'int',
+				sortable : true
+			}, {
+				name : 'order_Aprice',
+				type : 'String',
+				sortable : true
+			}, {
+				name : 'order_Acost',
+				type : 'string',
+				sortable : true
+			}, {
+				name : 'order_Aprofit',
+				type : 'string',
+				sortable : true
+			}{
+				name : 'dateCreated',
+				type : 'date',
+				dateFormat : 'time',
+				sortable : true
+			}, {
+				name : 'dateModified',
+				type : 'date',
+				dateFormat : 'time',
+				sortable : true
+			}]
 		});
 
 var pageSize = 20;
@@ -47,7 +36,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'student.StudentModel',
+			model : 'order.OrderModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -88,7 +77,7 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-var genderFieldEditor = {
+/*var genderFieldEditor = {
 	xtype : 'combo',
 	triggerAction : 'all',
 	forceSelection : true,
@@ -106,7 +95,7 @@ var genderFieldEditor = {
 					label : '女'
 				}]
 	}
-}
+}*/
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			listeners : {
 				cancelEdit : function(rowEditing, context) {
@@ -119,8 +108,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var studentGrid = new Ext.grid.GridPanel({
-			id : 'studentGrid',
+var orderGrid = new Ext.grid.GridPanel({
+			id : 'orderGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -128,61 +117,50 @@ var studentGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
-			columns : [{
-						text : 'ID',
-						width : 50,
-						sortable : true,
-						dataIndex : 'id'
-					}, {
-						text : "学号",
-						width : 120,
-						sortable : true,
-						dataIndex : 'code',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "姓名",
-						width : 80,
-						sortable : true,
-						dataIndex : 'fullName',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "性别",
-						width : 50,
-						sortable : true,
-						dataIndex : 'gender',
-						editor : genderFieldEditor
-					}, {
-						text : "年级",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'grade'
-					}, {
-						text : "班级",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'clazz'
-					}, {
-						text : "添加时间",
-						width : 150,
-						dataIndex : 'dateCreated',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
-					}, {
-						text : "修改时间",
-						width : 150,
-						dataIndex : 'dateModified',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
-					}],
+			title : '菜单列表',
+			columns :[{
+				text : 'ID',
+				width : 50,
+				sortable : true,
+				dataIndex : 'id'
+			},  {
+				text : '销售额',
+				width : 50,
+				sortable : true,
+				dataIndex : 'order_Aprice',
+				editor : textFieldEditor,
+				field : {
+					xtype : 'textfield'
+				}
+			}, {
+				text : "总成本",
+				width : 120,
+				sortable : true,
+				dataIndex : 'order_Acost',
+				editor : textFieldEditor,
+				field : {
+					xtype : 'textfield'
+				}
+			}, {
+				text : "净利润",
+				width : 80,
+				sortable : true,
+				editor : textFieldEditor,
+				dataIndex : 'order_Aprofit'
+				
+			}{
+				text : "添加时间",
+				width : 150,
+				dataIndex : 'dateCreated',
+				renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+				sortable : true
+			}, {
+				text : "修改时间",
+				width : 150,
+				dataIndex : 'dateModified',
+				renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+				sortable : true
+			} ],
 			viewConfig : {
 				columnsText : '列',
 				sortAscText : '升序',
@@ -209,9 +187,9 @@ var studentGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-studentGrid.getSelectionModel().on('selectionchange',
+orderGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			studentGrid.down('#delete').setDisabled(selections.length === 0);
+	     orderGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -224,13 +202,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	orderForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var studentForm = new Ext.form.FormPanel({
+var orderdForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -239,17 +217,9 @@ var studentForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "学号",
+						fieldLabel : "销售额",
 						xtype : 'textfield',
-						name : 'code'
-					}, {
-						fieldLabel : "姓名",
-						xtype : 'textfield',
-						name : 'name'
-					}, {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'gender'
+						name : 'order_Aprice'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -265,11 +235,11 @@ var studentForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '学生信息',
+			name : '销售样单',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [studentForm, studentGrid]
+							items : [orderForm, orderGrid]
 						});
 			}
 		});

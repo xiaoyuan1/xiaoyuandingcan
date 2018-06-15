@@ -47,11 +47,11 @@ public class OrderEntityGenerator extends GenericGenerator{
 					cell.setCellType(CellType.STRING);
 					String value = row.getCell(j).getStringCellValue().trim();
 					//if(j==0)break;
-					if (j == 1)
+					if (j == 0)
 						s.setOrder_Aprice(value);
-					if (j == 2)
+					if (j == 1)
 						s.setOrder_Acost(value);
-					if(j==3)
+					if(j==2)
 						s.setOrder_Aprofit(value);
 				}
 			}

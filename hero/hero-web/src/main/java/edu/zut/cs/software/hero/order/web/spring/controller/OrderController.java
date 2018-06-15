@@ -22,7 +22,7 @@ import edu.zut.cs.software.hero.order.service.OrderManager;
 		}
 
 		@Autowired
-		public void setOrderManager(OrderManager orderManager) {
+		public void setStudentManager(OrderManager orderManager) {
 			this.orderManager = orderManager;
 			this.manager = this.orderManager;
 		}

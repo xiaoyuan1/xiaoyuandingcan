@@ -1,27 +1,24 @@
-/**
- * 
- */
-Ext.define('student.controller.StudentController', {
+Ext.define('order.controller.OrderController', {
 	extend : 'Ext.app.Controller',
-	alias : 'widget.studentController',
-	stores : [ 'StudentStore' ],
-	models : [ 'StudentModel' ],
-	views : [ 'StudentGrid', 'StudentEdit' ],
+	alias : 'widget.OrderController',
+	stores : [ 'OrderStore' ],
+	models : [ 'OrderModel' ],
+	views : [ 'OrderGrid','OrderEdit'],
 	init : function() {
 		this.control({
-			'studentGrid' : {
-				itemdblclick : this.editStudent
+			'orderGrid' : {
+				itemdblclick : this.editOrder
 			},
-			'studentEdit button[action=save]' : {
-				click : this.updateStudent
+			'orderEdit button[action=save]' : {
+				click : this.updatOrder
 			}
 		});
 	},
-	editStudent : function(grid, record) {
-		var view = Ext.widget('studentEdit');
+	editOrder : function(grid, record) {
+		var view = Ext.widget('orderEdit');
 		view.down('form').loadRecord(record);
 	},
-	updateStudent : function(button) {
+	updatetOrder : function(button) {
 		var win = button.up('window');
 		form = win.down('form');
 		record = form.getRecord();
