@@ -4,10 +4,22 @@ import java.util.List;
 
 import edu.zut.cs.software.hero.base.service.GenericManager;
 import edu.zut.cs.software.hero.depot.domain.Depot;
+import edu.zut.cs.software.hero.user.domain.User;
 
 public interface DepotManager extends GenericManager<Depot, Long> {
 	
-	List<Depot> findAll();
+	/**
+	 * get student list by given code
+	 *
+	 * @param code
+	 * @return
+	 */
+	List<Depot> findByCode(String code);
 
-	Depot findbyDepotname(String depotname);
+	/**
+	 * 
+	 * @param fullname
+	 * @return
+	 */
+	List<Depot> findByFullname(String fullname);
 }
