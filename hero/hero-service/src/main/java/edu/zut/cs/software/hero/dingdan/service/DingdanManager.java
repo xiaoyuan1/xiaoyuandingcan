@@ -1,10 +1,30 @@
 package edu.zut.cs.software.hero.dingdan.service;
 
 
-import edu.zut.cs.software.hero.base.service.GenericManager;
+import java.util.List;
+
 import edu.zut.cs.software.hero.base.service.GenericTreeManager;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
 
-public interface DingdanManager extends GenericManager<Dingdan,Long>{
+/**
+ * 
+ * @author zhangyaohui
+ *
+ */
+public interface DingdanManager extends GenericTreeManager<Dingdan,Long>{
 
+	/**
+	 * get dingdan list by given orderid
+	 *
+	 * @param orderid
+	 * @return
+	 */
+	List<Dingdan> findByOrderid(String orderxinxi);
+
+	/**
+	 * 
+	 * @param orderxinxi
+	 * @return
+	 */
+	List<Dingdan> findByOrderxinxi(String orderxinxi);
 }

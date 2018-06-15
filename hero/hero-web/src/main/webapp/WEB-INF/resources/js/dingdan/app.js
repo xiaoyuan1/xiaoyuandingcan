@@ -4,7 +4,7 @@ Ext.Loader.setConfig({
 Ext.application({
 	name : 'dingdan',
 	appFolder : server_context + '/resources/js/dingdan/app',
-	controllers : [ 'dingdanController' ],
+	controllers : [ 'DingdanController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',

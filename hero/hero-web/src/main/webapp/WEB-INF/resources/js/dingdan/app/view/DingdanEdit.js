@@ -1,7 +1,7 @@
 Ext.define('dingdan.view.DingdanEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.dingdanEdit',
-	title : '编辑学生信息',
+	title : '编辑订单信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -12,29 +12,25 @@ Ext.define('dingdan.view.DingdanEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'code',
-				fieldLabel : '学号'
+				name : 'orderid',
+				fieldLabel : '订单号'
 			}, {
 				xtype : 'textfield',
-				name : 'fullName',
-				fieldLabel : '姓名'
+				name : 'ordertime',
+				fieldLabel : '订单时间'
 			}, {
 				xtype : 'textfield',
-				name : 'gender',
-				fieldLabel : '性别'
+				name : 'orderxinxi',
+				fieldLabel : '订单信息'
 			}, {
 				xtype : 'textfield',
-				name : 'major',
-				fieldLabel : '专业'
+				name : 'orderjiage',
+				fieldLabel : '订单价格'
 			}, {
 				xtype : 'textfield',
-				name : 'grade',
-				fieldLabel : '年级'
-			}, {
-				xtype : 'textfield',
-				name : 'clazz',
-				fieldLabel : '班级'
-			} ]
+				name : 'orderlianxiren',
+				fieldLabel : '订单联系人'
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',

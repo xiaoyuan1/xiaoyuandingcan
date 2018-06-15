@@ -1,6 +1,18 @@
 package edu.zut.cs.software.hero.dingdan.service;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.List;
+
+import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import edu.zut.cs.software.hero.base.service.GenericManagerTestCase;
+import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
+
+/*import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
@@ -19,10 +31,50 @@ public class DingdanManagerTest extends GenericGenerator{
 			for (int j = 0; j < 10; j++) {
 				Dingdan group = new Dingdan();
 				group.setOrderid("dingdan_" + i + "_" + j);
-				//group.setParent(g);
+				group.setParent(g);
 				g = this.groupManager.save(group);
 			}
 		}
+	}
+
+}*/
+public class DingdanManagerTest extends GenericManagerTestCase<Long, Dingdan, DingdanManager> {
+
+	DingdanManager dingdanManager;
+
+	public DingdanManagerTest() {
+		super(Dingdan.class);
+	}
+
+	@Autowired
+	public void setDingdanManager(DingdanManager dingdanManager) {
+		this.dingdanManager = dingdanManager;
+		this.manager = this.dingdanManager;
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		Dingdan dingdan = new Dingdan();
+		dingdan.setOrderxinxi("张三");
+		dingdan.setOrdertime("河南省郑州市");
+		dingdan.setOrderid("450007");
+		this.entity = this.manager.save(dingdan);
+	}
+
+	@Test
+	public void testFindByOrderxinxi() {
+		List<Dingdan> result = this.dingdanManager.findByOrderxinxi("张");
+		assertNotNull(result);
+		assertEquals(1, result.size());
+		assertEquals("张三", result.get(0).getOrderxinxi());
+	}
+
+	@Test
+	public void testFindByOrderid() {
+		String postorderid = this.entity.getOrderid();
+		List<Dingdan> result = this.dingdanManager.findByOrderid(postorderid);
+		assertEquals(postorderid, result.get(0).getOrderid());
+
 	}
 
 }

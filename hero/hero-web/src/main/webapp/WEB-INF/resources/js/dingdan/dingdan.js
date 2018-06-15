@@ -7,23 +7,23 @@ Ext.define('dingdan.DingdanModel', {
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'code',
+						name : 'orderid',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'fullName',
+						name : 'ordertime',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'gender',
+						name : 'orderxinxi',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'grade',
+						name : 'orderjiage',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'clazz',
+						name : 'orderlianxiren',
 						type : 'string',
 						sortable : true
 					}, {
@@ -67,7 +67,7 @@ var store = new Ext.data.Store({
 					} else {
 						verb = name + 'd';
 					}
-					Ext.example.msg(name, Ext.String.format("{0} user: {1}",
+					Ext.example.msg(name, Ext.String.format("{0} dingdan: {1}",
 									verb, record.getId()));
 				}
 			},
@@ -116,7 +116,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var studentGrid = new Ext.grid.GridPanel({
+var dingdanGrid = new Ext.grid.GridPanel({
 			id : 'dingdanGrid',
 			plugins : [rowEditing],
 			store : store,
@@ -125,61 +125,50 @@ var studentGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
-			columns : [{
-						text : 'ID',
-						width : 50,
-						sortable : true,
-						dataIndex : 'id'
-					}, {
-						text : "学号",
-						width : 120,
-						sortable : true,
-						dataIndex : 'code',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "姓名",
-						width : 80,
-						sortable : true,
-						dataIndex : 'fullName',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "性别",
-						width : 50,
-						sortable : true,
-						dataIndex : 'gender',
-						editor : genderFieldEditor
-					}, {
-						text : "年级",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'grade'
-					}, {
-						text : "班级",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'clazz'
-					}, {
-						text : "添加时间",
-						width : 150,
-						dataIndex : 'dateCreated',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
-					}, {
-						text : "修改时间",
-						width : 150,
-						dataIndex : 'dateModified',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
-					}],
+			title : '订单基本信息列表',
+			columns : [ {
+				text : 'ID',
+				width : 50,
+				sortable : true,
+				dataIndex : 'id'
+			}, {
+				text : "订单号",
+				width : 120,
+				sortable : true,
+				dataIndex : 'orderid'
+			}, {
+				text : "订单时间",
+				width : 80,
+				sortable : true,
+				dataIndex : 'ordertime'
+			}, {
+				text : "订单信息",
+				width : 300,
+				sortable : true,
+				dataIndex : 'orderxinxi'
+			}, {
+				text : " 订单价格",
+				width : 80,
+				sortable : true,
+				dataIndex : 'orderjiage'
+			}, {
+				text : "订单联系人",
+				width : 100,
+				sortable : true,
+				dataIndex : 'orderlianxiren'
+			}, {
+				text : "添加时间",
+				width : 150,
+				dataIndex : 'dateCreated',
+				renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+				sortable : true
+			}, {
+				text : "修改时间",
+				width : 150,
+				dataIndex : 'dateModified',
+				renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+				sortable : true
+			} ],
 			viewConfig : {
 				columnsText : '列',
 				sortAscText : '升序',
@@ -206,9 +195,9 @@ var studentGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-studentGrid.getSelectionModel().on('selectionchange',
+dingdanGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			studentGrid.down('#delete').setDisabled(selections.length === 0);
+			dingdanGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -221,13 +210,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	dingdanForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var studentForm = new Ext.form.FormPanel({
+var dingdanForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -236,17 +225,17 @@ var studentForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "学号",
+						fieldLabel : "订单号",
 						xtype : 'textfield',
-						name : 'code'
+						name : 'orderid'
 					}, {
-						fieldLabel : "姓名",
+						fieldLabel : "订单信息",
 						xtype : 'textfield',
-						name : 'name'
+						name : 'orderxinxi'
 					}, {
-						fieldLabel : "性别",
+						fieldLabel : "订单联系人",
 						xtype : 'textfield',
-						name : 'gender'
+						name : 'orderlianxiren'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -262,11 +251,11 @@ var studentForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '学生信息',
+			name : '订单信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [studentForm, studentGrid]
+							items : [dingdanForm, dingdanGrid]
 						});
 			}
 		});

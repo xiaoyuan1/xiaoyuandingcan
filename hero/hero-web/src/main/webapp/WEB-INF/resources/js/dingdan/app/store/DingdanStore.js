@@ -7,11 +7,11 @@ Ext.define('dingdan.store.DingdanStore', {
 	autoSync : true,// 需要同步
 	model : 'dingdan.model.DingdanModel',
 	proxy : {
-		url : server_context + '/teach/dingdan/.json',
+		url : server_context + '/dingdan/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/dingdan/.json',
-			update : server_context + '/teach/dingdan/.json'
+			read : server_context + '/dingdan/.json',
+			update : server_context + '/dingdan/.json'
 		},
 		reader : {
 			type : 'json',

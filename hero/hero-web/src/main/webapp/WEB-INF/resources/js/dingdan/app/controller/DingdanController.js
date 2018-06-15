@@ -6,7 +6,7 @@ Ext.define('dingdan.controller.DingdanController', {
 	views : [ 'DingdanGrid', 'DingdanEdit' ],
 	init : function() {
 		this.control({
-			'DingdanGrid' : {
+			'dingdanGrid' : {
 				itemdblclick : this.editDingdan
 			},
 			'dingdanEdit button[action=save]' : {
@@ -15,7 +15,7 @@ Ext.define('dingdan.controller.DingdanController', {
 		});
 	},
 	editDingdan : function(grid, record) {
-		var view = Ext.widget('DingdanEdit');
+		var view = Ext.widget('dingdanEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateDingdan : function(button) {

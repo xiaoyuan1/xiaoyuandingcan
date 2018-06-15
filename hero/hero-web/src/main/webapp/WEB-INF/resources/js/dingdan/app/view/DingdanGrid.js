@@ -1,11 +1,15 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('dingdan.store.DingdanStore');
-
+var dingdanStore = Ext.create('dingdan.store.DingdanStore');
+dingdanStore.load({
+	callback : function(records, operation, successful) {
+		console.log('department name:', records);
+	}
+});
 Ext.define('dingdan.view.DingdanGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.dingdanGrid',
-	title : 'Java EE 课程-学生列表',
+	title : '校园订餐  订单-信息列表',
 	store : dingdanStore,
 	columns : [ {
 		text : 'ID',
@@ -13,35 +17,30 @@ Ext.define('dingdan.view.DingdanGrid', {
 		sortable : true,
 		dataIndex : 'id'
 	}, {
-		text : "学号",
+		text : "订单号",
 		width : 120,
 		sortable : true,
-		dataIndex : 'code'
+		dataIndex : 'orderid'
 	}, {
-		text : "姓名",
+		text : "订单时间",
 		width : 80,
 		sortable : true,
-		dataIndex : 'fullName'
+		dataIndex : 'ordertime'
 	}, {
-		text : "性别",
+		text : "订单信息",
+		width : 300,
+		sortable : true,
+		dataIndex : 'orderxinxi'
+	}, {
+		text : " 订单价格",
 		width : 80,
 		sortable : true,
-		dataIndex : 'gender'
+		dataIndex : 'orderjiage'
 	}, {
-		text : " 专业",
-		width : 80,
+		text : "订单联系人",
+		width : 100,
 		sortable : true,
-		dataIndex : 'major'
-	}, {
-		text : "年级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'grade'
-	}, {
-		text : "班级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'clazz'
+		dataIndex : 'orderlianxiren'
 	}, {
 		text : "添加时间",
 		width : 150,

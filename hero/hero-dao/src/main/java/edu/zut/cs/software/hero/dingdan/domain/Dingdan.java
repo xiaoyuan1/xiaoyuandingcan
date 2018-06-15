@@ -6,15 +6,14 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import edu.zut.cs.software.hero.base.domain.BaseEntity;
 import edu.zut.cs.software.hero.base.domain.BaseTreeEntity;
 @Table(name = "T_DINGDAN")
 @Entity
-//@NamedQueries({ @NamedQuery(name = "Dingdan.getRoot", query = "select g from Dingdan g where g.parent is null") })
-public class Dingdan extends BaseEntity{
+@NamedQueries({ @NamedQuery(name = "Dingdan.getRoot", query = "select g from Dingdan g where g.parent is null") })
+public class Dingdan extends BaseTreeEntity<Dingdan>{
 
 	
-	private static final long serialVersionUID = -4376674977047164142L;
+	private static final long serialVersionUID = -1751952224371998469L;
 	
     @Column(name = "ORDERID")
     String orderid;
@@ -24,6 +23,8 @@ public class Dingdan extends BaseEntity{
 	String orderxinxi;
     @Column(name = "ORDERJIAGE")
 	String orderjiage;
+    @Column(name = "ORDERLIANXIREN")
+    String orderlianxiren;
 
         public String getOrderid() {
 		return orderid;
@@ -49,6 +50,12 @@ public class Dingdan extends BaseEntity{
 	public void setOrderjiage(String orderjiage) {
 		this.orderjiage = orderjiage;
 	}
+	 public String getOrderlianxiren() {
+			return orderlianxiren;
+		}
+		public void setOrderlianxiren(String orderlianxiren) {
+			this.orderlianxiren = orderlianxiren;
+		}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

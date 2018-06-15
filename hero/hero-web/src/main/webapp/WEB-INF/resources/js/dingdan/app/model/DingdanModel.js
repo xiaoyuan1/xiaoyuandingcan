@@ -1,32 +1,28 @@
-Ext.define('student.model.StudentModel', {
+Ext.define('dingdan.model.DingdanModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.studentModel',
-	fields : [ {
+	alias : 'widget.dingdanModel',
+	fields : [{
 		name : 'id',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'code',
+		name : 'orderid',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'fullName',
+		name : 'ordertime',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'gender',
+		name : 'orderxinxi',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'major',
+		name : 'orderjiage',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'grade',
-		type : 'string',
-		sortable : true
-	}, {
-		name : 'clazz',
+		name : 'orderlianxiren',
 		type : 'string',
 		sortable : true
 	}, {
@@ -39,5 +35,5 @@ Ext.define('student.model.StudentModel', {
 		type : 'date',
 		dateFormat : 'time',
 		sortable : true
-	} ]
+	}]
 });
