@@ -6,7 +6,18 @@ import edu.zut.cs.software.hero.base.service.GenericManager;
 import edu.zut.cs.software.hero.push.domain.Push;
 
 public interface PushManager extends GenericManager<Push, Long> {
-	List<Push> findAll();
+	/**
+	 * get student list by given code
+	 *
+	 * @param code
+	 * @return
+	 */
+	List<Push> findByCode(String code);
 
-	Push findbyPushname(String pushname);
+	/**
+	 * 
+	 * @param fullname
+	 * @return
+	 */
+	List<Push> findByFullname(String fullname);
 }

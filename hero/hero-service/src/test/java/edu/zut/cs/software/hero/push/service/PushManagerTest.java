@@ -1,27 +1,53 @@
 package edu.zut.cs.software.hero.push.service;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.List;
+
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.software.hero.base.service.GenericGenerator;
+import edu.zut.cs.software.hero.base.service.GenericManagerTestCase;
 import edu.zut.cs.software.hero.push.domain.Push;
 
 
-public class PushManagerTest  extends GenericGenerator{
-	@Autowired
+public class PushManagerTest  extends GenericManagerTestCase<Long,Push, PushManager>{
 	PushManager pushManager;
 
+	public PushManagerTest() {
+		super(Push.class);
+	}
+
+	@Autowired
+	public void setPushManager(PushManager pushManager) {
+		this.pushManager = pushManager;
+		this.manager = this.pushManager;
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		Push push = new Push();
+		push.setFood("手撕包菜");
+		push.setMessage("今日XXX活动，本店开展XXX活动，菜品一律XX折，并赠送XXX！！");
+		push.setLucky("101");
+		this.entity = this.manager.save(push);
+	}
+
 	@Test
-	public void push() {
-		for (int i = 0; i < 10; i++) {
-			Push g = new Push();
-			g.setMessage("group_" + i);
-			this.pushManager.save(g);
-			for (int j = 0; j < 10; j++) {
-				Push group = new Push();
-				group.setMessage("group_" + i + "_" + j);
-				g = this.pushManager.save(group);
-			}
-		}
+	public void testFindByFullname() {
+		List<Push> result = this.pushManager.findByFullname("张");
+		assertNotNull(result);
+		assertEquals(1, result.size());
+		assertEquals("张三", result.get(0).getEntityName());
+	}
+
+	@Test
+	public void testFindByPostcode() {
+		String postcode = this.entity.getCode();
+		List<Push> result = this.pushManager.findByCode(postcode);
+		assertEquals(postcode, result.get(0).getCode());
+
 	}
 }
