@@ -1,51 +1,51 @@
-/*package edu.zut.cs.software.hero.message.domain;
+package edu.zut.cs.software.hero.message.domain;
 
 import javax.persistence.Column;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import edu.zut.cs.software.hero.base.domain.BaseTreeEntity;
-import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
-@Table(name = "T_DINGDAN")
+import edu.zut.cs.software.hero.base.domain.BaseEntity;
+
+@Table(name="T_MESSAGE")
 @Entity
-@NamedQueries({ @NamedQuery(name = "Dingdan.getRoot", query = "select g from Dingdan g where g.parent is null") })
+public class Message extends BaseEntity{
+	private static final long serialVersionUID = -4376674977047164142L;
+	@Column
+	String username;
 
+	@Column
+	String foodname;
 
-public class Message extends BaseTreeEntity<Dingdan>{
+	@Column
+	String productname;
 
-	
-	private static final long serialVersionUID = -1751952224371998469L;
-	
-    @Column(name = "USERSNUMBER")
-    String usersNumber;
-    @Column(name = "SHOPSNUMBER")
-	String shopsNumber;
-    @Column(name = "TURNOVER")
-	String turnover;
+	public String getUsername() {
+		return username;
+	}
 
-        public String getusersNumber() {
-		return usersNumber;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public void setusersNumber(String usersNumber) {
-		this.usersNumber = usersNumber;
+
+	public String getFoodname() {
+		return foodname;
 	}
-	public String getshopsNumber() {
-		return shopsNumber;
+
+	public void setFoodname(String foodname) {
+		this.foodname = foodname;
 	}
-	public void setshopsNumber(String shopsNumber) {
-		this.shopsNumber = shopsNumber;
+
+	public String getProductname() {
+		return productname;
 	}
-	public String getturnover() {
-		return turnover;
+
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
-	public void setturnover(String turnover) {
-		this.turnover = turnover;
-	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-}*/
+
+}
