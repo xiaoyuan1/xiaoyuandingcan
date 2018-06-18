@@ -15,7 +15,11 @@ import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 import edu.zut.cs.software.hero.user.domain.User;
 
 
-
+/**
+ * @author wanghongfei
+ * 功能介绍：测试dao
+ * 
+ * */
 public class UserDaoTest extends GenericDaoTestCase<Long, User, UserDao>  {
 	@Autowired
 	UserDao userDao;

@@ -5,6 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
+
+/**
+ * @author wangongfei
+ * 功能介绍:定义实体各个属性
+ * 
+ * 
+ * 
+ * */
 @Table(name="T_USER")
 @Entity
 public class User extends BaseEntity{

@@ -13,6 +13,13 @@ import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
 import edu.zut.cs.software.hero.user.dao.UserDao;
 import edu.zut.cs.software.hero.user.domain.User;
 import edu.zut.cs.software.hero.user.service.UserManager;
+
+/**
+ * @author wanghongfei
+ * 创建实例
+ * 
+ * 
+ * */
 @Component
 public class UserManagerImpl extends GenericManagerImpl<User, Long> implements UserManager{
 	UserDao userDao;

@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import edu.zut.cs.software.hero.base.web.spring.controller.GenericController;
 import edu.zut.cs.software.hero.user.domain.User;
 import edu.zut.cs.software.hero.user.service.UserManager;
+
+/**
+ * @author wanghongfei
+ * web控制
+ * 
+ * */
 @Controller
 @RequestMapping("/student")
 public class UserController extends GenericController<User, Long, UserManager> {

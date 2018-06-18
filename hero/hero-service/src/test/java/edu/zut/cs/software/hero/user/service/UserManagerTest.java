@@ -16,7 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.software.hero.base.service.GenericManagerTestCase;
 import edu.zut.cs.software.hero.user.domain.User;
-
+/**
+ * @author wanghongfei
+ * 测试Manager
+ * */
 public class UserManagerTest  extends GenericManagerTestCase<Long, User, UserManager> {
 
 //	@Autowired

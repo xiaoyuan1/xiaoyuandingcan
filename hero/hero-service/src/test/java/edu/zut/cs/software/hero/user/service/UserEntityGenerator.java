@@ -17,7 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.user.domain.Gender;
 import edu.zut.cs.software.hero.user.domain.User;
-
+/**
+ * @author wanghongfei
+ * 向数据库中写入数据
+ * 
+ * */
 public class UserEntityGenerator extends GenericGenerator{
 	List<User> userList;
 
