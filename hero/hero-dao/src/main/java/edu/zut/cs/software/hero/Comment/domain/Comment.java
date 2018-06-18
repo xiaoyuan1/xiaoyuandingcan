@@ -10,7 +10,7 @@ import edu.zut.cs.software.hero.base.domain.BaseEntity;
 @Entity
 public class Comment extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;
-	@Column(name = "COMMENT")
+	@Column
 	String comment;
 	public String getComment() {
 		return comment;

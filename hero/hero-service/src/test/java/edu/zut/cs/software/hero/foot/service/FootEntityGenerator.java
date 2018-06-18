@@ -20,7 +20,7 @@ import edu.zut.cs.software.hero.user.service.UserManagerTest;
 
 /**
  *  Entity Generator for teach package.
- * @author liuxiaoming
+ * @author liwenbo
  *
  */
 public class FootEntityGenerator extends GenericGenerator {

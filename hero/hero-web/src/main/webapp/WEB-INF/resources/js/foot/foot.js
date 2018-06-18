@@ -3,36 +3,8 @@ Ext.require(['Ext.data.*', 'Ext.grid.*']);
 Ext.define('foot.FootModel', {
 			extend : 'Ext.data.Model',
 			fields : [ {
-				name : 'id',
-				type : 'long',
-				sortable : true
-			}, {
-				name : 'shop_id',
-				type : 'int',
-				sortable : true
-			}, {
-				name : 'product_name',
+				name : 'foot',
 				type : 'string',
-				sortable : true
-			}, {
-				name : 'product_price',
-				type : 'string',
-				sortable : true
-			}, {
-				name : 'product_introduce',
-				type : 'string',
-				sortable : true
-			}, {
-				name : 'product_state',
-				type : 'boolean',
-				sortable : true
-			}, {
-				name : 'product_volume',
-				type : 'string',
-				sortable : true
-			}, {
-				name : 'product_biaohao',
-				type : 'date',
 				sortable : true
 			},{
 				name : 'dateCreated',
@@ -135,45 +107,10 @@ var footGrid = new Ext.grid.GridPanel({
 			width : 600,
 			title : '菜单列表',
 			columns :[ {
-				text : 'ID',
+				text : '评价',
 				width : 50,
 				sortable : true,
-				dataIndex : 'id'
-			}, {
-				text : "商店id",
-				width : 120,
-				sortable : true,
-				dataIndex : 'shop_id'
-			}, {
-				text : "菜品名称",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_name'
-			}, {
-				text : "菜品价格",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_price'
-			}, {
-				text : " 菜品介绍",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_introduce'
-			}, {
-				text : "是否下架",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_state'
-			}, {
-				text : "销量",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_volume'
-			}, {
-				text : "菜品编号",
-				width : 80,
-				sortable : true,
-				dataIndex : 'product_biaohao'
+				dataIndex : 'foot'
 			},{
 				text : "添加时间",
 				width : 150,
@@ -215,7 +152,7 @@ var footGrid = new Ext.grid.GridPanel({
 
 footGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			footGrid.down('#delete').setDisabled(selections.length === 0);
+	footGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -243,9 +180,9 @@ var footdForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "Id",
+						fieldLabel : "评价",
 						xtype : 'textfield',
-						name : 'id'
+						name : 'foot'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -261,7 +198,7 @@ var footdForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '菜品信息',
+			name : '评价',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
