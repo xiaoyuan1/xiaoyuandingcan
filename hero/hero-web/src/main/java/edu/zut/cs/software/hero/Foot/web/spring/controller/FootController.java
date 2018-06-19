@@ -11,7 +11,11 @@ import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.base.web.spring.controller.GenericController;
 import edu.zut.cs.software.hero.foot.service.FootManager;
 
-
+/**
+ * hander
+ * @author liwenbo
+ *
+ */
 
 @Controller
 @RequestMapping("/foot")

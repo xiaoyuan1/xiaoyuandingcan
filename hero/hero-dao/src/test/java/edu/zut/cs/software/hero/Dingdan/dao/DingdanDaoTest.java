@@ -2,7 +2,6 @@ package edu.zut.cs.software.hero.Dingdan.dao;
 
 import static org.junit.Assert.*;
 
-import org.jboss.logging.Logger;
 import org.junit.Test;
 
 
@@ -15,7 +14,11 @@ import edu.zut.cs.software.hero.base.dao.GenericTreeDaoTestCase;
 import edu.zut.cs.software.hero.dingdan.dao.DingdanDao;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
 
-
+/**
+ * 
+ * @author zhangyaohui
+ *功能介绍：测试dao是否可以成功运行
+ */
 public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, DingdanDao> {
 
 	/**

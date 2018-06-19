@@ -14,7 +14,9 @@ public class FootDaoTest extends GenericDaoTestCase<Long, Foot, FootDao> {
 
 	@Autowired
 	FootDao footDao;
-
+/**
+ * test data access
+ */
 	@Test
 	public void test() {
 		Foot r = new Foot();

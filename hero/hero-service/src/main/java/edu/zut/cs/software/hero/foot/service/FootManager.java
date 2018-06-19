@@ -7,7 +7,11 @@ import edu.zut.cs.software.hero.Foot.domain.Foot;
 import edu.zut.cs.software.hero.base.service.GenericManager;
 
 public interface FootManager extends GenericManager<Foot, Long> {
-
+/**
+ * Defining logical methods
+ * @param product_name
+ * @return
+ */
 	//List<Foot> findAll();
 	List<Foot> findByproduct_name(String product_name);
 	List<Foot> findByproduct_biaohao(String fullname);

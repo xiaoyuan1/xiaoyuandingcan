@@ -7,6 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.base.domain.BaseEntity;
+/**
+ * Entity create
+ * @author liwenbo
+ *
+ */
 @Table(name="T_FOOT")
 @Entity
 public class Foot extends BaseEntity{
