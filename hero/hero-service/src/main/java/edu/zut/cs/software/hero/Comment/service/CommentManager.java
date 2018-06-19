@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.comment.service;
+package edu.zut.cs.software.hero.Comment.service;
 
 import java.util.List;
 

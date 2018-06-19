@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import edu.zut.cs.software.hero.Comment.domain.Comment;
 import edu.zut.cs.software.hero.base.web.spring.controller.GenericController;
-import edu.zut.cs.software.hero.comment.service.CommentManager;
+import edu.zut.cs.software.hero.Comment.service.CommentManager;
 
 
 @Controller

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.Comment.domain.Comment;
 
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
-import edu.zut.cs.software.hero.comment.service.CommentManager;
+import edu.zut.cs.software.hero.Comment.service.CommentManager;
 
 
 public class CommentManagerTest extends GenericGenerator{

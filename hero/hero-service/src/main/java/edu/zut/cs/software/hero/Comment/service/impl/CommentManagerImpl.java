@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.comment.service.impl;
+package edu.zut.cs.software.hero.Comment.service.impl;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import edu.zut.cs.software.hero.Comment.dao.CommentDao;
 import edu.zut.cs.software.hero.Comment.domain.Comment;
 import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.software.hero.comment.service.CommentManager;
+import edu.zut.cs.software.hero.Comment.service.CommentManager;
 
 /**
  * @author caiming
