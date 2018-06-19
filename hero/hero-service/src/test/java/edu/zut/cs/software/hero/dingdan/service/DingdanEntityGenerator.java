@@ -16,6 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
 
+/**
+ * 
+ * @author zhangyaohui
+ *先从excel表中读取数据，然后再将数据逐条写入数据库中
+ */
 public class DingdanEntityGenerator extends GenericGenerator {
 
 	List<Dingdan> dingdanList;

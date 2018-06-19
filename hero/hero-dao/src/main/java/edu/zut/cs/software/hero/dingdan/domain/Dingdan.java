@@ -7,6 +7,11 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.hero.base.domain.BaseTreeEntity;
+/**
+ * 
+ * @author zhangyaohui
+ *定义实体类各个属性，并且实现有关属性的方法
+ */
 @Table(name = "T_DINGDAN")
 @Entity
 @NamedQueries({ @NamedQuery(name = "Dingdan.getRoot", query = "select g from Dingdan g where g.parent is null") })

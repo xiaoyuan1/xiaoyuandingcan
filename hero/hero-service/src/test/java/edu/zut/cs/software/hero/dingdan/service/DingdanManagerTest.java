@@ -38,6 +38,11 @@ public class DingdanManagerTest extends GenericGenerator{
 	}
 
 }*/
+/**
+ * 
+ * @author zhangyaohui
+ *测试Manager
+ */
 public class DingdanManagerTest extends GenericManagerTestCase<Long, Dingdan, DingdanManager> {
 
 	DingdanManager dingdanManager;
@@ -55,8 +60,8 @@ public class DingdanManagerTest extends GenericManagerTestCase<Long, Dingdan, Di
 	@Before
 	public void setUp() throws Exception {
 		Dingdan dingdan = new Dingdan();
-		dingdan.setOrderxinxi("张三");
-		dingdan.setOrdertime("河南省郑州市");
+		dingdan.setOrderxinxi("水煮肉片一份");
+		dingdan.setOrdertime("2016.01.22");
 		dingdan.setOrderid("450007");
 		this.entity = this.manager.save(dingdan);
 	}
@@ -66,7 +71,7 @@ public class DingdanManagerTest extends GenericManagerTestCase<Long, Dingdan, Di
 		List<Dingdan> result = this.dingdanManager.findByOrderxinxi("张");
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getOrderxinxi());
+		assertEquals("水煮肉片一份", result.get(0).getOrderxinxi());
 	}
 
 	@Test

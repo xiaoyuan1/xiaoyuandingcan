@@ -9,6 +9,11 @@ import edu.zut.cs.software.hero.base.web.spring.controller.GenericController;
 import edu.zut.cs.software.hero.dingdan.domain.Dingdan;
 import edu.zut.cs.software.hero.dingdan.service.DingdanManager;
 
+/**
+ * 
+ * @author zhangyaohui
+ *web控制
+ */
 @Controller
 @RequestMapping("/dingdan")
 public class DingdanController extends GenericController<Dingdan, Long, DingdanManager> {
