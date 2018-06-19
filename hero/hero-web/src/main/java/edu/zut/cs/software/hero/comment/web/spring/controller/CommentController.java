@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.comment.web.spring.controller.copy;
+package edu.zut.cs.software.hero.comment.web.spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
