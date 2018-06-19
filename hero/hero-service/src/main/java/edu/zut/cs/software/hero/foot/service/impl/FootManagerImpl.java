@@ -19,7 +19,9 @@ import edu.zut.cs.software.hero.foot.service.FootManager;
 public class FootManagerImpl extends GenericManagerImpl<Foot, Long> implements FootManager {
 
 	FootDao footDao;
-
+/**
+ * logical methods realize
+ */
 	@Override
 	public List<Foot> findByproduct_name(String product_name) {
 
