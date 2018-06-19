@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.Comment.dao;
+package edu.zut.cs.software.hero.comment.dao;
 
 
 
@@ -11,8 +11,9 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.software.hero.Comment.domain.Comment;
+import edu.zut.cs.software.hero.comment.domain.Comment;
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
+import edu.zut.cs.software.hero.comment.dao.CommentDao;
 
 public class CommentDaoTest extends GenericDaoTestCase<Long, Comment, CommentDao>{
 

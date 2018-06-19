@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.Comment.service;
+package edu.zut.cs.software.hero.comment.service;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

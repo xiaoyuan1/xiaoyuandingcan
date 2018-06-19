@@ -1,6 +1,6 @@
-package edu.zut.cs.software.hero.Comment.dao;
+package edu.zut.cs.software.hero.comment.dao;
 
-import edu.zut.cs.software.hero.Comment.domain.Comment;
+import edu.zut.cs.software.hero.comment.domain.Comment;
 import edu.zut.cs.software.hero.base.dao.GenericDao;
 
 

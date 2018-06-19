@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.Comment.domain;
+package edu.zut.cs.software.hero.comment.domain;
 
 
 

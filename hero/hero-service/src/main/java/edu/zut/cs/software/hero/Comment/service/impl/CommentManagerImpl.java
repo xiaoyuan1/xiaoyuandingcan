@@ -1,4 +1,4 @@
-package edu.zut.cs.software.hero.Comment.service.impl;
+package edu.zut.cs.software.hero.comment.service.impl;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
 import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.software.hero.Comment.dao.CommentDao;
-import edu.zut.cs.software.hero.Comment.domain.Comment;
+import edu.zut.cs.software.hero.comment.domain.Comment;
 import edu.zut.cs.software.hero.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.software.hero.Comment.service.CommentManager;
+import edu.zut.cs.software.hero.comment.dao.CommentDao;
+import edu.zut.cs.software.hero.comment.service.CommentManager;
 
 /**
  * @author caiming
