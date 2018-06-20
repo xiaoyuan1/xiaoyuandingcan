@@ -23,7 +23,7 @@ public class FootManagerImpl extends GenericManagerImpl<Foot, Long> implements F
  * logical methods realize
  */
 	@Override
-	public List<Foot> findByproduct_name(String product_name) {
+	public List<Foot> findByProduct_name(String product_name) {
 
 		// 创建查询条件数据对象
 		Foot queryObject = new Foot();
@@ -43,7 +43,7 @@ public class FootManagerImpl extends GenericManagerImpl<Foot, Long> implements F
 	}
 
 	@Override
-	public List<Foot> findByproduct_biaohao(String product_biaohao) {
+	public List<Foot> findByProduct_bianhao(String product_biaohao) {
 		// 创建查询条件数据对象
 		Foot queryObject = new Foot();
 		queryObject.setProduct_biaohao(product_biaohao);

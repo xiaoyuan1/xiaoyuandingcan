@@ -16,21 +16,21 @@ import edu.zut.cs.software.hero.base.domain.BaseEntity;
 @Entity
 public class Foot extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;
-	@Column(name = "ID")
+	@Column
 	long id;//菜品id
-	@Column(name = "SHOP_ID")
+	@Column
 	int shop_id;//商店id
-	@Column(name = "PRODUCT_NAME")
+	@Column
 	String product_name;//菜品名称
-	@Column(name = "PRODUCT_PRICE")
+	@Column
 	String product_price;//菜品价格
-	@Column(name = "PRODUCT_INTRODUCE")
+	@Column
 	String product_introduce;//菜品介绍
-	@Column(name = "PRODUCT_STATE")
+	@Column
 	boolean product_state;//是否下架
-	@Column(name = "PRODUCT_VOLUME")
+	@Column
 	String product_volume;//销量
-	@Column(name = "PRODUCT_BIANHAO")
+	@Column
 	String product_biaohao;//菜品编号
 	public Long getId() {
 		return id;
