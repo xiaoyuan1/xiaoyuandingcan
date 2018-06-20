@@ -14,7 +14,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.push.domain.Push;
-import edu.zut.cs.software.hero.user.service.UserManagerTest;
+
 /**
  * @author zengzexing
  * 向数据库中写入数据
@@ -28,14 +28,14 @@ public class PushEntityGenerator extends GenericGenerator {
 	PushManager pushManager;
 
 	@Autowired
-	public void setPushManager(PushManager pushManager) {
+	public void setStudentManager(PushManager pushManager) {
 		this.pushManager = pushManager;
 	}
 
 	@Before
 	public void setUp() throws Exception {
 		this.pushList = new ArrayList<Push>();
-		InputStream input = UserManagerTest.class.getResourceAsStream("/hero.push.xlsx");
+		InputStream input = PushManagerTest.class.getResourceAsStream("/hero.push.xlsx");
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook(input);
 		XSSFSheet sheet = wb.getSheetAt(0);
@@ -46,10 +46,9 @@ public class PushEntityGenerator extends GenericGenerator {
 				Cell cell = row.getCell(j);
 				if (cell != null) {
 					cell.setCellType(CellType.STRING);
-				String value = row.getCell(j).getStringCellValue().trim();
-					/*if(j==0)
-						s.setDate(value);*/
-					if (j ==1)
+					String value = row.getCell(j).getStringCellValue().trim();
+					//if(j==0)break;
+					if (j == 1)
 						s.setFood(value);
 					if (j == 2)
 						s.setMessage(value);
@@ -66,7 +65,7 @@ public class PushEntityGenerator extends GenericGenerator {
 		this.pushManager.save(this.pushList);
 		List<Push> result = this.pushManager.findAll();
 		if (logger.isInfoEnabled()) {
-			logger.info("test() - List<Push> result=" + result); 
+			logger.info("test() - List<Push> result=" + result); //$NON-NLS-1$
 		}
 	}
 

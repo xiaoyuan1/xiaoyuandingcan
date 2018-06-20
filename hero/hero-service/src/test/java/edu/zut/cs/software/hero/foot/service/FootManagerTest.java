@@ -36,17 +36,17 @@ public class FootManagerTest extends GenericManagerTestCase<Long, Foot, FootMana
 	@Before
 	public void setUp() throws Exception {
 		Foot foot = new Foot();
-		foot.setProduct_name("宫保鸡丁");
-		foot.setProduct_biaohao("1001");
+		foot.setProduct_price(null);
+		foot.setProduct_introduce(null);
 		this.entity = this.manager.save(foot);
 	}
 
 	@Test
 	public void testFindByFullname() {
-		List<Foot> result = this.footManager.findByproduct_name("宫");
+		List<Foot> result = this.footManager.findByproduct_name(null);
 		assertNotNull(result);
-		assertEquals(1, result.size());
-		assertEquals("宫保鸡丁", result.get(0).getProduct_name());
+		assertEquals(0, result.size());
+		assertEquals(null, result.get(0).getProduct_name());
 	}
 
 	@Test

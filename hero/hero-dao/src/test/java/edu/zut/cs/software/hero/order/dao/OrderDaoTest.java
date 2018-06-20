@@ -17,15 +17,16 @@ public class OrderDaoTest extends GenericDaoTestCase<Long, Order, OrderDao> {
 	OrderDao orderDao;
 	@Test
 	public void test() {
-		Order o=new Order();
-		o.setOrder_Aprice("test_order_Aprice");
-		Order test_order_Aprice=this.orderDao.save(o);
-		o.setOrder_Acost("test_order_Acost");
-		Order test_order_Acost=this.orderDao.save(o);
-		o.setOrder_Aprofit("test_order_Aprofit");
-		Order test_order_Aprofit=this.orderDao.save(o);
+		Order r = new Order();
+		r.setOrder_Acost("test_order");
+		Order test_role = this.orderDao.save(r);
+		Long role_id = test_role.getId();
+		Order result = this.orderDao.getOne(role_id);
+		assertEquals(test_role, result);
 		List<Order> all = this.orderDao.findAll();
-		assertEquals(test_order_Aprofit, all);
+		if (logger.isInfoEnabled()) {
+			logger.info("test() - List<Order> all size ={}", all.size()); //$NON-NLS-1$
+		}
 	}
 	
 }

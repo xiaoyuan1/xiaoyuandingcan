@@ -38,10 +38,10 @@ public class DepotManagerTest extends GenericManagerTestCase<Long, Depot, DepotM
 
 	@Test
 	public void testFindByFullname() {
-		List<Depot> result = this.depotManager.findByFullname("张");
+		List<Depot> result = this.depotManager.findByFullname(null);
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getEntityName());
+		assertEquals(null, result.get(0).getEntityName());
 	}
 
 	@Test

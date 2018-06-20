@@ -39,10 +39,10 @@ public class CommentManagerTest extends GenericManagerTestCase<Long, Comment, Co
 
 	@Test
 	public void testFindByFullname() {
-		List<Comment> result = this.commentManager.findByFullname("张");
+		List<Comment> result = this.commentManager.findByFullname(null);
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getEntityName());
+		assertEquals(null, result.get(0).getEntityName());
 	}
 
 	@Test

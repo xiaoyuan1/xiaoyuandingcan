@@ -41,10 +41,10 @@ public class PushManagerTest  extends GenericManagerTestCase<Long,Push, PushMana
 
 	@Test
 	public void testFindByFullname() {
-		List<Push> result = this.pushManager.findByFullname("张");
+		List<Push> result = this.pushManager.findByFullname(null);
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getEntityName());
+		assertEquals(null, result.get(0).getEntityName());
 	}
 
 	@Test

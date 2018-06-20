@@ -2,8 +2,11 @@ package edu.zut.cs.software.hero.push.dao;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 import edu.zut.cs.software.hero.push.domain.Push;
 
@@ -20,12 +23,16 @@ public class PushDaoTest extends GenericDaoTestCase<Long, Push, PushDao> {
 
 	@Test
 	public void test() {
-		Push push = new Push();
-		push.setMessage("111111111111111");
-		push.setFood("beat");
-		Push test_push = this.pushDao.save(push);
-		Push result = new Push();
-		assertEquals(test_push, result);
+		Push r = new Push();
+		r.setFood("test_push");
+		Push test_role = this.pushDao.save(r);
+		Long role_id = test_role.getId();
+		Push result = this.pushDao.getOne(role_id);
+		assertEquals(test_role, result);
+		List<Push> all = this.pushDao.findAll();
+		if (logger.isInfoEnabled()) {
+			logger.info("test() - List<Push> all size ={}", all.size()); //$NON-NLS-1$
+		}
 	}
 
 }

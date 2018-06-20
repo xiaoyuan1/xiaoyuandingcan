@@ -38,6 +38,9 @@ public class DingdanDaoTest extends GenericTreeDaoTestCase<Long, Dingdan, Dingda
 		Dingdan result = this.dingdanDao.getOne(role_id);
 		assertEquals(test_dingdan, result);
 		List<Dingdan> all = this.dingdanDao.findAll();
+		if (logger.isInfoEnabled()) {
+			logger.info("test() - List<Dingdan> all size ={}", all.size()); //$NON-NLS-1$
+		}
 	}
 	/*@Autowired
 	public void setGroupDao(DingdanDao dingdanDao) {

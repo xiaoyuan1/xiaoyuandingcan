@@ -29,18 +29,18 @@ public class MessageManagerTest extends GenericManagerTestCase<Long, Message, Me
 	@Before
 	public void setUp() throws Exception {
 		Message message = new Message();
-		message.setFoodname("手撕包菜");
-		message.setProductname("鱼香肉丝");
-		message.setUsername("张三");
+		message.setFoodname(null);
+		message.setProductname(null);
+		message.setUsername(null);
 		this.entity = this.manager.save(message);
 	}
 
 	@Test
 	public void testFindByFullname() {
-		List<Message> result = this.messageManager.findByFullname("张");
+		List<Message> result = this.messageManager.findByFullname(null);
 		assertNotNull(result);
 		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getEntityName());
+		assertEquals(null, result.get(0).getEntityName());
 	}
 
 	@Test
