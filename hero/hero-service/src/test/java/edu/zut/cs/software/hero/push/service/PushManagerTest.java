@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericManagerTestCase;
 import edu.zut.cs.software.hero.push.domain.Push;
 
+/**
+ * @author zengzexing
+ * 测试Manager
+ * */
 
 public class PushManagerTest  extends GenericManagerTestCase<Long,Push, PushManager>{
 	PushManager pushManager;

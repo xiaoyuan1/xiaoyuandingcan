@@ -7,6 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.dao.GenericDaoTestCase;
 import edu.zut.cs.software.hero.push.domain.Push;
 
+/**
+ * @author zengzexing
+ * 功能介绍：测试dao
+ * 
+ * */
 
 public class PushDaoTest extends GenericDaoTestCase<Long, Push, PushDao> {
 

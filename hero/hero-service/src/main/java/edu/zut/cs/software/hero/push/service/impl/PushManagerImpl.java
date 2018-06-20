@@ -13,6 +13,13 @@ import edu.zut.cs.software.hero.push.dao.PushDao;
 import edu.zut.cs.software.hero.push.domain.Push;
 import edu.zut.cs.software.hero.push.service.PushManager;
 
+/**
+ * @author zengzexing
+ * 创建实例
+ * 
+ * 
+ * */
+
 @Component
 public class PushManagerImpl extends GenericManagerImpl<Push, Long> implements PushManager{
 	PushDao pushDao;

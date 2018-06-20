@@ -15,6 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.software.hero.base.service.GenericGenerator;
 import edu.zut.cs.software.hero.push.domain.Push;
 import edu.zut.cs.software.hero.user.service.UserManagerTest;
+/**
+ * @author zengzexing
+ * 向数据库中写入数据
+ * 
+ * */
 
 public class PushEntityGenerator extends GenericGenerator {
 
