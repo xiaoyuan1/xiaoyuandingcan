@@ -22,4 +22,10 @@ public interface FootManager extends GenericManager<Foot, Long> {
 	 * @return
 	 */
 	List<Foot> findByProduct_bianhao(String product_bianhao);
+	/**
+	 * 
+	 * @param product_bianhao
+	 * @return
+	 */
+	int addProduct(String product_bianhao);
 }
