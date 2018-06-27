@@ -61,5 +61,11 @@ public class FootManagerImpl extends GenericManagerImpl<Foot, Long> implements F
 		this.footDao = footDao;
 		this.dao = this.footDao;
 	}
+
+	@Override
+	public int addProduct(String product_bianhao) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
