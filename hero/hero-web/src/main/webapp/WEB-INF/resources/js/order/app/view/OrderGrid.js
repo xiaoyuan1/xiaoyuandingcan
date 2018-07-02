@@ -27,6 +27,16 @@ Ext.define('order.view.OrderGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'order_Aprofit'
+	}, {
+		text : "折扣券",
+		width : 80,
+		sortable : true,
+		dataIndex : 'order_Adiscount'
+	}, {
+		text : "积分",
+		width : 80,
+		sortable : true,
+		dataIndex : 'order_Aintegral'
 	},{
 		text : "添加时间",
 		width : 150,

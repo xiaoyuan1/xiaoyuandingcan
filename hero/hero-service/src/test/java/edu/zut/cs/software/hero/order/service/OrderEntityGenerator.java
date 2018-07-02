@@ -53,6 +53,10 @@ public class OrderEntityGenerator extends GenericGenerator{
 						s.setOrder_Acost(value);
 					if(j==2)
 						s.setOrder_Aprofit(value);
+					if(j==3)
+						s.setorder_Adiscount(value);
+					if(j==4)
+						s.setorder_Aintegral(value);
 				}
 			}
 			this.orderList.add(s);

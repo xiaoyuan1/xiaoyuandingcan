@@ -18,6 +18,14 @@ Ext.define('order.model.OrderModel', {
 		type : 'String',
 		sortable : true
 	},{
+		name : 'order_Adiscount',
+		type : 'String',
+		sortable : true
+	},{
+		name : 'order_Aintegral',
+		type : 'String',
+		sortable : true
+	},{
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',

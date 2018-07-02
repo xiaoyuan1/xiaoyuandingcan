@@ -22,6 +22,14 @@ Ext.define('order.view.OrderEdit', {
 				xtype : 'textfield',
 				name : 'order_Aprofit',
 				fieldLabel : '净利润'
+			}, {
+				xtype : 'textfield',
+				name : 'order_Adiscount',
+				fieldLabel : '折扣券'
+			}, {
+				xtype : 'textfield',
+				name : 'order_Aintegral',
+				fieldLabel : '积分'
 			}]
 		} ];
 		this.buttons = [ {

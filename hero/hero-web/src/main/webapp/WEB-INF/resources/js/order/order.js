@@ -7,18 +7,26 @@ Ext.define('order.OrderModel', {
 				type : 'int',
 				sortable : true
 			}, {
-				name : 'order_Aprice',
+				name : 'order_Aprice',        //总销售额
 				type : 'String',
 				sortable : true
 			}, {
-				name : 'order_Acost',
+				name : 'order_Acost',    //成本
 				type : 'string',
 				sortable : true
 			}, {
-				name : 'order_Aprofit',
+				name : 'order_Aprofit',  //利润
 				type : 'string',
 				sortable : true
-			}{
+			},{
+				name : 'order_Adiscount',  //折扣券
+				type : 'string',
+				sortable : true
+			},{
+				name : 'order_Aintegral',  //积分
+				type : 'string',
+				sortable : true
+			},{
 				name : 'dateCreated',
 				type : 'date',
 				dateFormat : 'time',
@@ -148,7 +156,21 @@ var orderGrid = new Ext.grid.GridPanel({
 				editor : textFieldEditor,
 				dataIndex : 'order_Aprofit'
 				
-			}{
+			},{
+				text : "折扣券",
+				width : 80,
+				sortable : true,
+				editor : textFieldEditor,
+				dataIndex : 'order_Adiscount'
+				
+			},{
+				text : "积分",
+				width : 80,
+				sortable : true,
+				editor : textFieldEditor,
+				dataIndex : 'order_Aintegral'
+				
+			},{
 				text : "添加时间",
 				width : 150,
 				dataIndex : 'dateCreated',

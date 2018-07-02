@@ -48,6 +48,8 @@ public class OrderManagerTest extends  GenericManagerTestCase<Long, Order, Order
 		user.setOrder_Acost("100");
 		user.setOrder_Aprice("100");
 		user.setOrder_Aprofit("100");
+		user.setorder_Adiscount("100");
+		user.setorder_Aintegral("100");
 		this.entity = this.manager.save(user);
 	}
 

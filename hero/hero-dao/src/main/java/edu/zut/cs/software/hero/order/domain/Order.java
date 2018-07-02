@@ -18,6 +18,10 @@ public class Order  extends BaseEntity{
 	@Column
 	String order_Anumber;      //次数
 	@Column
+	String order_Adiscount;   //折扣券
+	@Column
+	String order_Aintegral;   //积分
+	@Column
 	String code;
 	public String getCode() {
 		return code;
@@ -26,7 +30,23 @@ public class Order  extends BaseEntity{
 	public void setCode(String code) {
 		this.code = code;
 	}
+	
+	public String getorder_Adiscount() {
+		return order_Adiscount;
+	}
 
+	public void setorder_Adiscount(String order_Adiscount) {
+		this.order_Adiscount = order_Adiscount;
+	}
+
+	public String getorder_Aintegral() {
+		return order_Aintegral;
+	}
+
+	public void setorder_Aintegral(String order_Aintegral) {
+		this.order_Aintegral= order_Aintegral;
+	}
+	
 	public String getOrder_Aprice() {
 		return order_Aprice;
 	}
