@@ -77,6 +77,7 @@ public class FootEntityGenerator extends GenericGenerator {
 		List<Foot> result = this.footManager.findAll();
 		if (logger.isInfoEnabled()) {
 			logger.info("test() - List<Foot> result=" + result); //$NON-NLS-1$
+			
 		}
 	}
 

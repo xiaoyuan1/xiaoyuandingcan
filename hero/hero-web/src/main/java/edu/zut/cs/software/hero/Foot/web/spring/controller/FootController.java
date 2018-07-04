@@ -29,7 +29,7 @@ public class FootController extends GenericController<Foot, Long, FootManager> {
 		return result;
 	}
 	@Autowired
-	public void setStudentManager(FootManager footManager) {
+	public void setFootManager(FootManager footManager) {
 		this.footManager = footManager;
 		this.manager = this.footManager;
 	}

@@ -1,5 +1,5 @@
-var pageSize = 5;
 
+var pageSize = 5;
 var footStore = Ext.create('foot.store.FootStore');
 footStore.load({
 	callback : function(records, operation, successful) {
@@ -69,7 +69,6 @@ Ext.define('foot.view.FootGrid', {
 		sortAscText : '升序',
 		sortDescText : '降序'
 	},
-
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
 		store : footStore,
@@ -84,4 +83,3 @@ Ext.define('foot.view.FootGrid', {
 		emptyMsg : "没有记录"
 	})
 });
-
